@@ -12,4 +12,5 @@
 
 
 ## 项目源码
+* https://github.com/vuejs/vue-webpack-example
 * https://github.com/vuejs/vue/tree/dev/examples
