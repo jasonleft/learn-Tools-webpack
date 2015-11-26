@@ -22,26 +22,26 @@
 ```
 
 ## Demo1 webpack1 生成js
-1. 新建目录demo1
+1.新建目录demo1
 ```
 mkdir demo1
 ```
-2. 在项目目录下初始化npm
+2.在项目目录下初始化npm
 ```
 cd demo1
 npm init
 ```
-3. 下载webpack
+3.下载webpack
 ```
 npm i webpack --save-dev
 ```
-4. 向`package.json`中添加webpack加载内容
+4.向`package.json`中添加webpack加载内容
 ```
 "script" : {
     "start" : "webpack ./index.js a.js"
 }
 ```
-5. 在目录下新建index.js,并输入如下代码
+5.在目录下新建index.js,并输入如下代码
 ```
 alert('OK webpack') //弹窗显示OK
 ```
@@ -49,72 +49,72 @@ alert('OK webpack') //弹窗显示OK
 ```
 npm start
 ```
-7. 打开index.html查看结果
+7.打开index.html查看结果
 ```
 open index.html
 ```
-8. 结果如图
+8.结果如图
 ![OK webpack](https://github.com/dingyiming/learn-Tools-webpack/blob/master/demos/youtube/pics/1OKwebpack.png?raw=true)
 
 ## Demo2  webpack2 模块加载
-1. 复制一份Demo1目录命名为Demo2
-2. 修改`index.js`中代码
+1.复制一份Demo1目录命名为Demo2
+2.修改`index.js`中代码
 ```
 alert('OK webpack' + require('./bear.js'))
 ```
-3. 新建`bear.js`
+3.新建`bear.js`
 ```
 module.exports = 'Oh! It works!'
 ```
-4. `npm start` 打包
-5. `open index.html` 访问查看
-6. 结果如图
+4.`npm start` 打包
+5.`open index.html` 访问查看
+6.结果如图
 ![](https://github.com/dingyiming/learn-Tools-webpack/blob/master/demos/youtube/pics/2OhItworks.png?raw=true)
 
 ## Demo3 webpack-dev-server
-1. 复制一份Demo2目录命名为Demo3
-2. npm下载`webpack-dev-server`
+1.复制一份Demo2目录命名为Demo3
+2.npm下载`webpack-dev-server`
 ```
 npm i webpack-dev-server --save-dev
 ```
-3. 更改`package.json`中代码：
+3.更改`package.json`中代码：
 ```
 "scripts": {
     "start": "webpack-dev-server ./index.js"
   },
 ```
-4. 用`webpack-dev-server`打包
+4.用`webpack-dev-server`打包
 ```
 npm start
 ```
-5. 浏览器访问 `localhost:8080`
-6. 结果如图
+5.浏览器访问 `localhost:8080`
+6.结果如图
 ![](https://github.com/dingyiming/learn-Tools-webpack/blob/master/demos/youtube/pics/2OhItworks.png?raw=true)
 
 ## Demo4  use jquery
-1. 复制一份Demo3目录命名为Demo4
-2. 加载`jquery`
+1.复制一份Demo3目录命名为Demo4
+2.加载`jquery`
 ```
 npm i jquery --save
 ```
-3. 更改`bear.js`内容为
+3.更改`bear.js`内容为
 ```
 var $ = require('jquery')
 module.exports = $('<div/>').html('Hello Webpack')
 ```
-4. 更改`index.js`
+4.更改`index.js`
 ```
 require(['./bear.js',function(bear){
     document.body.appendChild(bear[0])
 }])
 ```
-5. 打包`npm start` 访问`localhost:8080`
-6. 结果如图
+5.打包`npm start` 访问`localhost:8080`
+6.结果如图
 ![](https://github.com/dingyiming/learn-Tools-webpack/blob/master/demos/youtube/pics/2OhItworks.png?raw=true)
 
 ## Demo5 use css
-1. 复制一份Demo4目录命名为Demo5
-2. 更改`bear.js`
+1.复制一份Demo4目录命名为Demo5
+2.更改`bear.js`
 ```
 var $ = require('jquery')
 
@@ -122,28 +122,28 @@ require('./bear.css')
 
 module.exports = $('<div/>').html('OK! Webpack!')
 ```
-3. 新建`bear.css`
+3.新建`bear.css`
 ```
 @import "base.css";
 div{
     color:red;
 }
 ```
-4. 新建`bese.css`
+4.新建`bese.css`
 ```
 body{
     background: green;
 }
 ```
-5. 下载css加载工具
+5.下载css加载工具
 ```
 npm i css-loader --save-dev
 ```
-6. 下载style加载工具
+6.下载style加载工具
 ```
 npm i style-loader --save-dev
 ```
-7. 新建`webpack.config.js`文件
+7.新建`webpack.config.js`文件
 ```
 module.exports = {
     entry : './index.js',
@@ -158,9 +158,9 @@ module.exports = {
     }
 }
 ```
-8. 打包`npm start` ,访问`localhost:8080`
+8.打包`npm start` ,访问`localhost:8080`
 
-9. 结果如图
+9.结果如图
 ![](https://github.com/dingyiming/learn-Tools-webpack/blob/master/demos/youtube/pics/4css.png?raw=true)
 
 
