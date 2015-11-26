@@ -1,0 +1,15 @@
+{
+  "name": "demo1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack-dev-server": "^1.14.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server ./index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
