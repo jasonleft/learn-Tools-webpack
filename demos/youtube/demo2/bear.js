@@ -1,1 +1,1 @@
-module.exports = 'Vuejs and webpack'
+module.exports = 'Oh! It works'

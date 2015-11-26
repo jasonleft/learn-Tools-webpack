@@ -44,14 +44,14 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	alert(__webpack_require__(1))
+	alert('OK webpack' + __webpack_require__(1))
 
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	module.exports = 'Vuejs and webpack'
+	module.exports = 'Oh! It works'
 
 /***/ }
 /******/ ]);

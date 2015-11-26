@@ -1,1 +1,1 @@
-alert(require('./bear.js'))
+alert('OK webpack' + require('./bear.js'))
