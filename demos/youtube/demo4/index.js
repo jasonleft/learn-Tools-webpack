@@ -1,1 +1,3 @@
-alert('OK webpack' + require('./bear.js'))
+require(['./bear.js',function(bear){
+    document.body.appendChild(bear[0])
+}])

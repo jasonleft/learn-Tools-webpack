@@ -1,1 +1,2 @@
-module.exports = 'Oh! It works!'
+var $ = require('jquery')
+module.exports = $('<div/>').html('Hello Webpack')
