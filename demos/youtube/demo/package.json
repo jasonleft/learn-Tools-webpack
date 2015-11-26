@@ -1,0 +1,19 @@
+{
+  "name": "demo",
+  "version": "0.0.1",
+  "description": "learn webpack ",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.0",
+    "style-loader": "^0.13.0",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server  ./index.js"
+  },
+  "author": "dingyiming",
+  "license": "MIT"
+}
